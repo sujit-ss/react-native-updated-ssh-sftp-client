@@ -1,7 +1,8 @@
 {
-  "name": "react-native-ssh-sftp",
-  "version": "1.0.3",
-  "description": "SSH and SFTP client library for React Native.",
+  "name": "react-native-updated-ssh-sftp-client",
+  "version": "1.0.0",
+  "homepage": "https://github.com/PopBot/react-native-updated-ssh-sftp-client",
+  "description": "Updated SSH and SFTP client library for React Native.",
   "main": "index.js",
   "files": [
     "android/",
@@ -13,16 +14,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "ssh"
   ],
-  "author": "Qian Sha",
+  "author": "PopBot",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.54.0"
+    "react-native": "*",
+    "react": "*"
   },
   "repository" :
   {
     "type" : "git",
-    "url" : "https://github.com/shaqian/react-native-ssh-sftp.git"
+    "url" : "https://github.com/PopBot/react-native-updated-ssh-sftp-client.git"
   }
 }
