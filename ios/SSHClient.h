@@ -15,6 +15,7 @@
 
     @property (nonatomic, weak) id <SSHClientDelegate> delegate;
 
+- (instancetype)initWithHost:(NSString *)host port:(NSInteger)port andUsername:(NSString *)username;
 - (void) startShell:(NSString *)ptyType error:(NSError **)error;
 - (void) sftpDownload:(NSString *)path toPath:(NSString *)filePath error:(NSError **)error;
 - (BOOL) sftpUpload:(NSString *)filePath toPath:(NSString *)path;

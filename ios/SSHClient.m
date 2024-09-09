@@ -13,9 +13,10 @@
 int downloadedPerc = 0;
 int uploadedPerc = 0;
 
-- (instancetype)init {
-    if ((self = [super init])) {
-        _session = [NMSSHSession new];
+- (instancetype)initWithHost:(NSString *)host port:(NSInteger)port andUsername:(NSString *)username {
+    self = [super init];
+    if (self) {
+        _session = [[NMSSHSession alloc] initWithHost:host port:port andUsername:username];
         _sftpSession = [[NMSFTP alloc] init];
         _key = [[NSString alloc] init];
         _downloadContinue = false;

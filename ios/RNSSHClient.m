@@ -68,7 +68,7 @@ RCT_EXPORT_METHOD(connectToHost:(NSString *)host
             [session authenticateByInMemoryPublicKey:[passwordOrKey objectForKey:@"publicKey"] privateKey:[passwordOrKey objectForKey:@"privateKey"] andPassword:[passwordOrKey objectForKey:@"passphrase"]];
             
             if (session.isAuthorized) {
-                SSHClient* client = [SSHClient new];
+                SSHClient* client = [[SSHClient alloc] initWithHost:host port:port andUsername:username];
                 client._session = session;
                 client._key = key;
                 [[self clientPool] setObject:client forKey:key];
